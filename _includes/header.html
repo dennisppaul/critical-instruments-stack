@@ -1,0 +1,59 @@
+<header class="site-header" role="banner">
+
+  <div class="wrapper">
+    {%- assign default_paths = site.pages | map: "path" -%}
+    {%- assign page_paths = site.header_pages | default: default_paths -%}
+    
+<a class="site-title" rel="author" href="{{ '/' | relative_url }}">
+  <span style="font-weight: 800; font-size: 32px;">Critical</span>
+  <span style="font-weight: 400; font-size: 32px;">Instruments</span>
+  <span style="font-weight: 300; font-size: 32px;">Stack</span>
+</a>
+
+<!--     <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a> -->
+
+<!-- 
+<a class="site-title" rel="author" href="{{ '/' | relative_url }}">
+  <span style="font-weight: 800;">C</span>
+  <span style="font-weight: 774;">r</span>
+  <span style="font-weight: 748;">i</span>
+  <span style="font-weight: 722;">t</span>
+  <span style="font-weight: 696;">i</span>
+  <span style="font-weight: 670;">c</span>
+  <span style="font-weight: 644;">a</span>
+  <span style="font-weight: 618;">l</span>
+  <span style="font-weight: 592;">&nbsp;</span>
+  <span style="font-weight: 566;">I</span>
+  <span style="font-weight: 540;">n</span>
+  <span style="font-weight: 514;">s</span>
+  <span style="font-weight: 488;">t</span>
+  <span style="font-weight: 462;">r</span>
+  <span style="font-weight: 436;">u</span>
+  <span style="font-weight: 410;">m</span>
+  <span style="font-weight: 384;">e</span>
+  <span style="font-weight: 358;">n</span>
+  <span style="font-weight: 332;">t</span>
+  <span style="font-weight: 306;">s</span>
+  <span style="font-weight: 280;">&nbsp;</span>
+  <span style="font-weight: 254;">S</span>
+  <span style="font-weight: 228;">t</span>
+  <span style="font-weight: 202;">a</span>
+  <span style="font-weight: 176;">c</span>
+  <span style="font-weight: 150;">k</span>
+</a>
+ -->
+
+    {%- if page_paths -%}
+      <nav class="site-nav">
+        <div class="trigger">
+          {%- for path in page_paths -%}
+            {%- assign my_page = site.pages | where: "path", path | first -%}
+            {%- if my_page.title -%}
+                <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </nav>
+    {%- endif -%}
+  </div>
+</header>
