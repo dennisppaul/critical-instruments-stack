@@ -1,3 +1,3 @@
 # Critical Instruments Stack
 
-A Collection of Works That Relate to the Concept of [Critical Instruments](https://critical-Instruments.digitalmedia-bremen.de/):
+A collection of works that relate to the concept of [Critical Instruments](https://critical-Instruments.digitalmedia-bremen.de/).
